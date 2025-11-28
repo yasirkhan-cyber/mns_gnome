@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/styles.css" />
+  <title><%= title %> | National Crop Genomics & Speed Breeding Centre</title>
+</head>
+<header>
+  <div class="banner-container">
+    <img src="/images/banner.jpg" alt="Banner" class="banner-img"/>
+    <div class="banner-overlay">
+      <h1 class="project-title">National Crop Genomics & Speed Breeding Centre</h1>
+    </div>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Home</a></li>
+      <li><a href="/germ-plasma" class="<%= title === 'Germ Plasma' ? 'active' : '' %>">Germ Plasma</a></li>
+    </ul>
+  </nav>
+</header>

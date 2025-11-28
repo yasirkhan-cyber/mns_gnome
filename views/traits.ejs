@@ -1,0 +1,8 @@
+<%- include('partials/header', { title }); %>
+<main>
+  <section>
+    <h2>Traits for <%= name %></h2>
+    <div id="traits-table-wrapper"></div>
+  </section>
+</main>
+<script>if(window.loadTraitsTable)loadTraitsTable('<%= name %>');</script>
