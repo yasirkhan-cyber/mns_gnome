@@ -37,15 +37,18 @@ A modern, full-stack web app for exploring cotton and wheat germ plasma details 
 
 ## Deployment
 
-### Backend (Render.com)
+### Vercel (Current Setup)
+- This project is configured for Vercel deployment
+- **Configuration:** `vercel.json` and `api/index.js` are set up for serverless deployment
+- **Auto-deploy:** Vercel automatically deploys when you push to your connected Git branch
+- **Manual redeploy:** Go to Vercel Dashboard → Your Project → Deployments → Click "..." → "Redeploy"
+- **Environment Variables:** Set `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME` in Vercel project settings
+
+### Alternative: Render.com
 - Add these build/start commands:
   - **Build:** `npm install`
   - **Start:** `node server.js`
 - Fill your DB variables in Render Secrets settings as shown in `.env.example`
-
-### Frontend/Static (Netlify)
-- This project is SSR (server-side rendered) via Node.js. For true static, convert all `.ejs` views to HTML and upload `public/` (see README tip).
-- Or, host on Render exclusively for full server features (recommended).
 
 ---
 
