@@ -19,7 +19,13 @@ app.use((req, res, next) => {
   res.status(404).render('404', { title: 'Page Not Found' });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Server running on port', PORT);
-});
+// Export app for Vercel serverless
+module.exports = app;
+
+// Start server locally (not on Vercel)
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log('Server running on port', PORT);
+  });
+}
